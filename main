@@ -51,6 +51,11 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+  body{
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size:cover;
+  }
   </style>
   </head>
   <body background = "./background2.jpg">

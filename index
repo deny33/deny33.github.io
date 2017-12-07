@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body background = "./background2.jpg">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="./main">To-Do-List</a>
+  <a href="./Suggestions">Suggestions</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+<style>
+h1{
+  text-align : center;
+}
+
+div h3 {
+    min-width: 50px;
+    max-width:400px;
+    border: 5px solid black;
+    padding: 25px;
+    margin: auto;
+    background:white;
+    position:relative
+}
+  </style>
+  <div>
+<body>
+  <h1> Home </h1>
+<h3>
+  Welcome to my to do list. This is the home page of the webside.
+  To navigate to the other webpages of this site. simply open the navigator by clicked in the topleft corner. from
+  here on out you can click on one of the names to go to the corresponding webpage. This site contains the following webpages:
+  a to-do list, a home page and a suggestions page.
+</h3>
+</div>
+</body>
+
+</html>

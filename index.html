@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-
-
-.sidenav {
+  <head>
+    <style>
+/*this is the css part for the navigation bar
+side panel
+*/
+.navBar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
 }
 
-.sidenav p{
+/*text above the navigation buttons*/
+.navBar p{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -25,7 +27,9 @@
   display: block;
   transition: 0.3s;
 }
-.sidenav a {
+
+/* navigation buttons*/
+.navBar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -33,12 +37,13 @@
     display: block;
     transition: 0.3s;
 }
-
-.sidenav a:hover {
-    color: #f1f1f1;
+/* making the color light up when you hover the mouse over them */
+.navBar a:hover {
+    color: white;
 }
 
-.sidenav .closebtn {
+/* the position of the closing button for the navigationbar */
+.navBar .closingbutton {
     position: absolute;
     top: 0;
     right: 25px;
@@ -47,64 +52,76 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .navBar {padding-top: 15px;}
+  .navBar a {font-size: 18px;}
 }
+/*background properties
+*/
 body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
 }
-</style>
-</head>
-<body background = "./background2.jpg">
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <p> Click on one of the following buttons to navigate </p>
-  <a href="#">Home</a>
-  <a href="./main">To-Do-List</a>
-  <a href="./suggestion">Suggestions</a>
-</div>
+/* end of css navigation bar part */
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    </style>
+  </head>
+<!-- start html part for the webpage -->
+<!-- set the background of the webpage -->
+  <body background = "./background2.jpg">
+<!-- setting an id for the navigation bar aswell as putting in the buttons and text -->
+    <div id="myNavBar" class="navBar">
+      <a href="javascript:void(0)" class="closingbutton" onclick="closeNavBar()">&times;</a>
+      <p>Click on one of the following buttons to navigate</p>
+      <a href="#">Home</a>
+      <a href="./main">To-Do-List</a>
+      <a href="./suggestion">Suggestions</a>
+      <!-- creating a little more space at the end -->
+      <p> </p>
+    </div>
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
-}
+    <span style="font-size:30px;cursor:pointer" onclick="openNavBar()">&#9776; open</span>
+  </body>
+  <script>
+//start javascript part for the navigation bar
+//function that opens the navigation bar
+    function openNavBar() {
+    document.getElementById("myNavBar").style.width = "200px";
+    }
+//function that closes the navigation bar
+    function closeNavBar() {
+    document.getElementById("myNavBar").style.width = "0";
+    }
+// end of javascript part navigation bar
+// with this the navigation bar is fully coded
+  </script>
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-
-</body>
-<style>
-h1{
-  text-align : center;
-}
-
-div h3 {
-    min-width: 50px;
-    max-width:400px;
-    border: 5px solid black;
-    padding: 25px;
-    margin: auto;
-    background:white;
-    position:relative
-}
+  <style>
+  /* css part for the white box with text in the middle */
+  /*center the title above the box */
+    h1{
+      text-align : center;
+    }
+    /*add a background , max-width and min-width to the box */
+    div h3 {
+      max-width:400px;
+      border: 5px solid black;
+      padding: 25px;
+      margin: auto;
+      background:white;
+      position:relative
+      }
   </style>
   <div>
-<body>
-  <h1> Home </h1>
-<h3>
-  Welcome to my to do list. This is the home page of the webside.
+    <body>
+      <h1> Home </h1>
+      <h3>
+  Welcome to the homepage of my website.
   To navigate to the other webpages of this site. simply open the navigator by clicked in the topleft corner. from
   here on out you can click on one of the names to go to the corresponding webpage. This site contains the following webpages:
-  a to-do list, a home page and a suggestions page.
-</h3>
-</div>
-</body>
-
+  a To-Do-list, a home page and a suggestions page.
+      </h3>
+    </body>
+  </div>
 </html>

@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'todolist.apps.TodolistConfig',
+    "main.apps.MainConfig",
+    'suggestions.apps.SuggestionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

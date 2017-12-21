@@ -76,9 +76,10 @@ body{
     <div id="myNavBar" class="navBar">
       <a href="javascript:void(0)" class="closingbutton" onclick="closeNavBar()">&times;</a>
       <p>Click on one of the following buttons to navigate</p>
-      <a href="./index">Home</a>
-      <a href="./main">To-Do-List</a>
-      <a href="#">Suggestions</a>
+      <!--<a href="./index">Home</a> -->
+        <a href="{% url 'todolist'%}">Home</a>
+        <a href="{% url 'main'%}">To-Do-List</a>
+        <a href="#">Suggestions</a>
       <!-- creating a little more space at the end -->
       <p> </p>
     </div>
@@ -163,6 +164,7 @@ img{
     <p> Making a website </p>
     <!-- creates a button and put a picture in it with a link towards another site. -->
     <a href="https://www.htmlgoodies.com/introduction/intro/article.php/3473571"> <img src="website.jpg"> </a>
+  </ur>
   </ul>
 </div>
   </body>
